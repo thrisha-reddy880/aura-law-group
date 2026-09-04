@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apex Legal | Corporate Law Firm Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts for premium typography -->
+    <link href="https://googleapis.com" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Header Navigation -->
+<!-- Premium Navbar Layout with Multi-Tier Dropdown -->
+<header class="navbar">
+    <div class="logo">AURA<span>LAW GROUP</span></div>
+    <nav>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <!-- Interactive Dropdown Sub-Menu -->
+            <li class="dropdown">
+                <a href="#services" class="dropdown-trigger">Practice Sectors ▾</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#services" onclick="simulateSelect('startup')">Startup Scaling</a></li>
+                    <li><a href="#services" onclick="simulateSelect('ip')">Intellectual Property</a></li>
+                    <li><a href="#services" onclick="simulateSelect('cyber')">Data Privacy & Cyber</a></li>
+                </ul>
+            </li>
+            <li><a href="#testimonials">Reviews</a></li>
+            <li><a href="#about">Our Firm</a></li>
+        </ul>
+    </nav>
+    <div class="nav-actions">
+        <button id="themeToggleBtn" class="theme-toggle">🌓</button>
+        <!-- Mock Client Portal Portal Button -->
+        <button class="cta-btn secondary-cta" onclick="alert('Client Portal is a mock framework feature. Secure database backend integration is under construction.')">Client Login</button>
+        <button class="cta-btn" id="openModalBtn">Book Consultation</button>
+    </div>
+</header>
+
+
+
+<!-- Tech-Forward Hero Section -->
+<section id="home" class="hero">
+    <div class="hero-content">
+        <h1>Legal Frameworks<br>For Tech Innovators.</h1>
+        <p>Aura Law Group provides elite legal counsel, scaling strategies, and asset protection for startups, digital platforms, and AI enterprises.</p>
+        <button class="hero-btn" onclick="document.getElementById('services').scrollIntoView({behavior: 'smooth'})">Explore Our Services</button>
+    </div>
+</section>
+
+<!-- Interactive Services Section -->
+<section id="services" class="services-section">
+    <h2 class="section-title">What This Website is Used For</h2>
+    <p class="section-subtitle-text">Click a practice sector below to discover how we protect digital innovations.</p>
+    
+    <div class="interactive-container">
+        <!-- Tab Buttons -->
+        <div class="tab-menu">
+            <button class="tab-link active" onclick="openService(event, 'startup')">Startup Scaling</button>
+            <button class="tab-link" onclick="openService(event, 'ip')">Intellectual Property</button>
+            <button class="tab-link" onclick="openService(event, 'cyber')">Data Privacy & Cyber</button>
+        </div>
+
+        <!-- Tab Contents -->
+        <div id="startup" class="tab-content" style="display: block;">
+            <h3>Venture Capital & Structuring</h3>
+            <p>We help tech founders safely structure equity distribution, handle angel investor funding rounds, and draft ironclad co-founder agreements to ensure stable growth.</p>
+        </div>
+
+        <div id="ip" class="tab-content" style="display: none;">
+            <h3>Patent & Algorithm Protection</h3>
+            <p>Your source code and proprietary machine learning models are highly valuable. We register international software patents and defend your trade secrets from competitors.</p>
+        </div>
+
+        <div id="cyber" class="tab-content" style="display: none;">
+            <h3>Global Compliance & Data Security</h3>
+            <p>We architect user privacy policies, manage data breach response protocols, and ensure your SaaS platform complies with global internet regulations like GDPR and CCPA.</p>
+        </div>
+    </div>
+</section>
+
+    <!-- Our Firm / About Section -->
+<section id="about" class="about-section">
+    <div class="about-container">
+        <div class="about-image-placeholder">
+            <!-- Simulated premium office window graphic overlay -->
+            <div class="inner-graphic">⚖️ APEX LEGAL</div>
+        </div>
+        <div class="about-content">
+            <h2 class="about-title">About Our Firm</h2>
+            <p class="about-subtitle">Established on principles of unyielding integrity, absolute discretion, and legal excellence.</p>
+            <p class="about-text">
+                For over two decades, our firm has served as a trusted partner to multinational enterprises, tech innovators, and high-net-worth individuals. We don't just interpret the law—we shape strategies that protect your business and accelerate your long-term success.
+            </p>
+            <div class="firm-stats">
+                <div class="stat-box">
+                    <h3>20+</h3>
+                    <p>Years Experience</p>
+                </div>
+                <div class="stat-box">
+                    <h3>98%</h3>
+                    <p>Success Rate</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Interactive Testimonials Section -->
+<section id="testimonials" class="reviews-section">
+    <h2 class="section-title">Trusted By Visionary Founders</h2>
+    <p class="section-subtitle-text">See how we help tech enterprises defend their digital territory.</p>
+    
+    <div class="carousel-container">
+        <div class="review-card">
+            <p id="reviewText" class="review-text">"Aura Law Group completely secured our Series A funding documentation. Their understanding of developer equity allocations is unmatched."</p>
+            <h4 id="reviewAuthor" class="review-author">— Sarah Jenkins, CEO of CloudPulse Technologies</h4>
+        </div>
+        <div class="carousel-controls">
+            <button class="control-btn" onclick="prevReview()">◀</button>
+            <button class="control-btn" onclick="nextReview()">▶</button>
+        </div>
+    </div>
+</section>
+
+<!-- Interactive Legal Risk Assessment Tool -->
+<section id="calculator" class="calc-section">
+    <div class="calc-container">
+        <h2>Is Your Tech Startup Legally Secure?</h2>
+        <p class="calc-intro">Take this 30-second automated risk assessment to find potential legal gaps in your business structure.</p>
+        
+        <div class="calc-box">
+            <!-- Question 1 -->
+            <div class="calc-question">
+                <label>1. Have you signed a formal Co-Founder Equity Agreement?</label>
+                <div class="radio-options">
+                    <label><input type="radio" name="q1" value="30"> Yes, completely documented</label>
+                    <label><input type="radio" name="q1" value="10"> Verbal agreement only</label>
+                    <label><input type="radio" name="q1" value="0"> No agreement yet</label>
+                </div>
+            </div>
+
+            <!-- Question 2 -->
+            <div class="calc-question">
+                <label>2. Is your source code and software IP officially registered?</label>
+                <div class="radio-options">
+                    <label><input type="radio" name="q2" value="35"> Yes, proprietary patents filed</label>
+                    <label><input type="radio" name="q2" value="15"> We have basic NDA contracts</label>
+                    <label><input type="radio" name="q2" value="0"> No, it is unprotected open code</label>
+                </div>
+            </div>
+
+            <!-- Question 3 -->
+            <div class="calc-question">
+                <label>3. Does your platform have active GDPR/Privacy compliance documents?</label>
+                <div class="radio-options">
+                    <label><input type="radio" name="q3" value="35"> Yes, fully audited</label>
+                    <label><input type="radio" name="q3" value="0"> No or unsure</label>
+                </div>
+            </div>
+
+            <button type="button" class="calc-btn" onclick="calculateScore()">Analyze My Legal Risk</button>
+
+            <!-- Score Results Container -->
+            <div id="calcResult" class="calc-result" style="display: none;">
+                <h3 id="resultScore">Your Score: 0/100</h3>
+                <p id="resultStatus" class="result-status"></p>
+                <p id="resultAdvice" class="result-advice"></p>
+                <button class="cta-btn inline-cta" id="calcCta" onclick="document.getElementById('openModalBtn').click()">Fix My Gaps Now</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Interactive Consultation Modal (Hidden by Default) -->
+    <div id="contactModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" id="closeModalBtn">&times;</span>
+            <h2>Request a Case Evaluation</h2>
+            <p>Submit your details and a legal expert will review your case within 24 hours.</p>
+            
+            <form id="consultationForm">
+                <div class="form-group">
+                    <input type="text" id="fullName" placeholder="Full Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" placeholder="Email Address" required>
+                </div>
+                <div class="form-group">
+                    <textarea id="caseSummary" rows="4" placeholder="Brief Case Summary..." required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Submit Request</button>
+                <div id="formFeedback" class="form-feedback"></div>
+            </form>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
